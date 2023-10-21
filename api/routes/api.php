@@ -21,4 +21,5 @@ Route::delete('/participante/{id}','destroy');
 
 Route::controller(TorneoController::class)->group(function(){
     Route::post('/torneo/simular-torneo','generarBracketDobleEliminacion');
+    Route::post('/torneo/mostrarBracket','mostrarBracket');
 });

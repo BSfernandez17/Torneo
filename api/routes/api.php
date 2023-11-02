@@ -20,6 +20,10 @@ Route::delete('/participante/{id}','destroy');
 });
 
 Route::controller(TorneoController::class)->group(function(){
-    Route::post('/torneo/simular-torneo','generarBracketDobleEliminacion');
-    Route::post('/torneo/mostrarBracket','mostrarBracket');
+    Route::post('/torneo/simular-torneo/{torneo_id}','generarBracketDobleEliminacion');
+    Route::get('/torneo','index');
+    Route::post('/torneo','store');
+    Route::get('/torneo/{torneo_id}','show');
+    Route::put('/torneo/{torneo_id}','update');
+    Route::delete('/torneo/{torneo_id}','destroy');
 });
